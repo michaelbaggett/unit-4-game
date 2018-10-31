@@ -9,7 +9,8 @@
 //row that lists our current score
 
 
-var userScore = 0;
+const startingScore = 0;
+var userScore = 0
 var wins = 0;
 var losses = 0;
 
@@ -39,7 +40,7 @@ crystal1 = Math.floor(Math.random() * 12) + 1;
 crystal2 = Math.floor(Math.random() * 12) + 1;
 crystal3 = Math.floor(Math.random() * 12) + 1;
 crystal4 = Math.floor(Math.random() * 12) + 1;
-userScore = 0;
+$("trackScore").text("Score: " + startingScore);
 console.log("crystal1 " + crystal1);
 console.log("crystal2 " + crystal2);
 console.log("crystal3 " + crystal3);
@@ -66,6 +67,11 @@ $("#crystal-1").click(function(){
     userScore = userScore + crystal1;
     console.log("User Total is now: "+ userScore);
     $("#trackScore").text("Score: " + userScore);
+    if (userScore === compRandomNum){
+        win(); 
+    } else if (userScore > compRandomNum){
+        lose();
+    }
 });
 $("#crystal-2").click(function(){
     userScore = userScore + crystal2;
