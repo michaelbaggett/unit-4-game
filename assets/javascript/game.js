@@ -23,10 +23,10 @@ var crystal1 = Math.floor(Math.random() * 12) + 1;
 var crystal2 = Math.floor(Math.random() * 12) + 1;
 var crystal3 = Math.floor(Math.random() * 12) + 1;
 var crystal4 = Math.floor(Math.random() * 12) + 1;
-console.log("crystal1 " + crystal1);
-console.log("crystal2 " + crystal2);
-console.log("crystal3 " + crystal3);
-console.log("crystal4 " + crystal4);
+// console.log("crystal1 " + crystal1);
+// console.log("crystal2 " + crystal2);
+// console.log("crystal3 " + crystal3);
+// console.log("crystal4 " + crystal4);
 
 $("#win").text("Wins: " + wins);
 $("#lose").text("Losses: " + losses);
@@ -42,10 +42,10 @@ crystal3 = Math.floor(Math.random() * 12) + 1;
 crystal4 = Math.floor(Math.random() * 12) + 1;
 userScore = startingScore
 $("#trackScore").text("Score: " + startingScore);
-console.log("crystal1 " + crystal1);
-console.log("crystal2 " + crystal2);
-console.log("crystal3 " + crystal3);
-console.log("crystal4 " + crystal4);
+// console.log("crystal1 " + crystal1);
+// console.log("crystal2 " + crystal2);
+// console.log("crystal3 " + crystal3);
+// console.log("crystal4 " + crystal4);
 }
 
 function win(){
@@ -78,16 +78,31 @@ $("#crystal-2").click(function(){
     userScore = userScore + crystal2;
     console.log("User Total is now: "+ userScore);
     $("#trackScore").text("Score: " + userScore);
+    if (userScore === compRandomNum){
+        win(); 
+    } else if (userScore > compRandomNum){
+        lose();
+    }
 });
 $("#crystal-3").click(function(){
     userScore = userScore + crystal3;
     console.log("User Total is now: "+ userScore);
     $("#trackScore").text("Score: " + userScore);
+    if (userScore === compRandomNum){
+        win(); 
+    } else if (userScore > compRandomNum){
+        lose();
+    }
 });
 $("#crystal-4").click(function(){
     userScore = userScore + crystal4;
     console.log("User Total is now: "+ userScore);
     $("#trackScore").text("Score: " + userScore);
+    if (userScore === compRandomNum){
+        win(); 
+    } else if (userScore > compRandomNum){
+        lose();
+    }
 });
 
 //loop if user gets exact number of score = win++, else if user goes OVER the generated number user loses++
