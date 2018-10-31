@@ -67,6 +67,21 @@ $("#crystal-1").click(function(){
     console.log("User Total is now: "+ userScore);
     $("#trackScore").text("Score: " + userScore);
 });
+$("#crystal-2").click(function(){
+    userScore = userScore + crystal2;
+    console.log("User Total is now: "+ userScore);
+    $("#trackScore").text("Score: " + userScore);
+});
+$("#crystal-3").click(function(){
+    userScore = userScore + crystal3;
+    console.log("User Total is now: "+ userScore);
+    $("#trackScore").text("Score: " + userScore);
+});
+$("#crystal-4").click(function(){
+    userScore = userScore + crystal4;
+    console.log("User Total is now: "+ userScore);
+    $("#trackScore").text("Score: " + userScore);
+});
 
 //on click add the crystal amount to the users starting score of 0
 
