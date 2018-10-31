@@ -9,7 +9,7 @@
 //row that lists our current score
 
 
-const startingScore = 0;
+var startingScore = 0;
 var userScore = 0
 var wins = 0;
 var losses = 0;
@@ -40,7 +40,8 @@ crystal1 = Math.floor(Math.random() * 12) + 1;
 crystal2 = Math.floor(Math.random() * 12) + 1;
 crystal3 = Math.floor(Math.random() * 12) + 1;
 crystal4 = Math.floor(Math.random() * 12) + 1;
-$("trackScore").text("Score: " + startingScore);
+userScore = startingScore
+$("#trackScore").text("Score: " + startingScore);
 console.log("crystal1 " + crystal1);
 console.log("crystal2 " + crystal2);
 console.log("crystal3 " + crystal3);
@@ -88,7 +89,5 @@ $("#crystal-4").click(function(){
     console.log("User Total is now: "+ userScore);
     $("#trackScore").text("Score: " + userScore);
 });
-
-//on click add the crystal amount to the users starting score of 0
 
 //loop if user gets exact number of score = win++, else if user goes OVER the generated number user loses++
