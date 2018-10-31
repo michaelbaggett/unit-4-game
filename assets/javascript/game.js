@@ -9,7 +9,7 @@
 //row that lists our current score
 
 
-var score = 0;
+var userScore = 0;
 var wins = 0;
 var losses = 0;
 
@@ -25,8 +25,26 @@ console.log("crystal1 " + crystal1);
 console.log("crystal2 " + crystal2);
 console.log("crystal3 " + crystal3);
 console.log("crystal4 " + crystal4);
-
+//define reset, win, lose function
+function reset() {
+compRandomNum = Math.floor(Math.random() * 102) + 19;
+console.log(compRandomNum);
+//crystal random num
+crystal1 = Math.floor(Math.random() * 12) + 1;
+crystal2 = Math.floor(Math.random() * 12) + 1;
+crystal3 = Math.floor(Math.random() * 12) + 1;
+crystal4 = Math.floor(Math.random() * 12) + 1;
+userScore = 0;
+console.log("crystal1 " + crystal1);
+console.log("crystal2 " + crystal2);
+console.log("crystal3 " + crystal3);
+console.log("crystal4 " + crystal4);
+}
 //hide crystal amount from user
+$("#win").text("Wins: " + wins);
+$("#lose").text("Losses: " + losses);
+
+//define reset, win, lose function
 
 //click functions for crystals
 
