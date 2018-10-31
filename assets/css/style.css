@@ -1,0 +1,43 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background-image: url("../images/background.png");
+}
+
+
+.container {
+    box-sizing: border-box
+}
+
+#heading {
+    /* background-color: black; */
+    color: #3551E3;
+    padding: 20px;
+    margin-top:10px;
+    text-align: center;
+    font-family: Cinzel;
+    font-weight: bolder;
+    font-size: 4rem;
+}  
+
+#directions{
+    /* background-color: royalblue; */
+    color: #343d46;
+    height: 125px;
+    text-align: center;
+    font-family: Cinzel;
+    font-weight: 850;
+    font-size: 20px;
+    margin-bottom: 25px;
+
+}
+
+.col{
+    height: 150px;
+    /* background-color: darkseagreen; */
+    color: 3551E3;
+    font-size: 25px;
+    font-weight: bold;
+    /* border: 2px solid black; */
+    font-family: Cinzel;
+}
