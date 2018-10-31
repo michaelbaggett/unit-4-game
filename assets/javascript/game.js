@@ -9,11 +9,18 @@
 //row that lists our current score
 
 
-var score = 0
+var score = 0;
+var wins = 0;
+var losses = 0;
 
-//computer generates random number the user must try to match
+//computer random num
+var compRandomNum = Math.floor(Math.random() * 102) + 19;
+console.log(compRandomNum);
+//crystal random num
+var crystalValue = Math.floor(Math.random() * 12) + 1;
+console.log(crystalValue)
 
-//crystal random number generated
+//crystals generate their random numbers
 
 //hide crystal amount from user
 
