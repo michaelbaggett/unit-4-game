@@ -16,6 +16,7 @@ var losses = 0;
 //computer random num
 var compRandomNum = Math.floor(Math.random() * 102) + 19;
 console.log(compRandomNum);
+$("#comp-score").text(compRandomNum)
 //crystal random num
 var crystal1 = Math.floor(Math.random() * 12) + 1;
 var crystal2 = Math.floor(Math.random() * 12) + 1;
@@ -32,7 +33,7 @@ $("#lose").text("Losses: " + losses);
 //define reset, win, lose function
 function reset() {
 compRandomNum = Math.floor(Math.random() * 102) + 19;
-console.log(compRandomNum);
+$("#comp-score").text(compRandomNum);
 //crystal random num//
 crystal1 = Math.floor(Math.random() * 12) + 1;
 crystal2 = Math.floor(Math.random() * 12) + 1;
@@ -61,6 +62,11 @@ function lose(){
 }
 
 //click functions for crystals
+$("#crystal-1").click(function(){
+    userScore = userScore + crystal1;
+    console.log("User Total is now: "+ userScore);
+    $("#trackScore").text("Score: " + userScore);
+});
 
 //on click add the crystal amount to the users starting score of 0
 
