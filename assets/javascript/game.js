@@ -25,11 +25,15 @@ console.log("crystal1 " + crystal1);
 console.log("crystal2 " + crystal2);
 console.log("crystal3 " + crystal3);
 console.log("crystal4 " + crystal4);
+
+$("#win").text("Wins: " + wins);
+$("#lose").text("Losses: " + losses);
+
 //define reset, win, lose function
 function reset() {
 compRandomNum = Math.floor(Math.random() * 102) + 19;
 console.log(compRandomNum);
-//crystal random num
+//crystal random num//
 crystal1 = Math.floor(Math.random() * 12) + 1;
 crystal2 = Math.floor(Math.random() * 12) + 1;
 crystal3 = Math.floor(Math.random() * 12) + 1;
@@ -40,11 +44,21 @@ console.log("crystal2 " + crystal2);
 console.log("crystal3 " + crystal3);
 console.log("crystal4 " + crystal4);
 }
-//hide crystal amount from user
-$("#win").text("Wins: " + wins);
-$("#lose").text("Losses: " + losses);
 
-//define reset, win, lose function
+function win(){
+    wins++;
+    alert("WINNER WINNER CHICKEN DINNER");
+    $("#win").text("Wins: " + wins);
+    reset();
+}
+
+function lose(){
+    losses++;
+    alert("LOSER! BETTER LUCK NEXT TIME!!");
+    $("#lose").text("Losses: " + losses);
+    reset();
+
+}
 
 //click functions for crystals
 
