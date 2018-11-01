@@ -51,14 +51,14 @@ $("#trackScore").text("Your Score: " + startingScore);
 
 function win(){
     wins++;
-    alert("WINNER WINNER CHICKEN DINNER");
+    $("#win-lose-text").text("We have a winner!");
     $("#win").text("Wins: " + wins);
     reset();
 }
 
 function lose(){
     losses++;
-    alert("LOSER! BETTER LUCK NEXT TIME!!");
+    $("#win-lose-text").text("Better luck next time!");
     $("#lose").text("Losses: " + losses);
     reset();
 
